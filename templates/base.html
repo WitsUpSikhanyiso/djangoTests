@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+
+header{
+
+background-color:#857D80;
+}
+a:link{
+text-decoration:none;
+}
+
+a{
+
+padding-right:230px;
+text-align:center;
+}
+
+#a1:hover{
+
+background-color: #F7F2F4;
+
+}
+
+</style>
+</head>
+<body>
+<h1>Welcome to tutor tracker website</h1>
+
+<header>
+	{% if user.is_authenticated %}
+		<p>Hi {{user.username}}! </p>
+		<a id="a1" href="{% url 'logout' %}"> logout </a> | <a id="a1"href="{% url 'user_details' user.pk %}"> Account | </a>
+	{% else %}
+		<p>You are not logged in </p>
+		<a id="a1" href="{% url 'login'%}"> Login </a> | <a id="a1" href="{% url 'signup' %}"> Sign Up | </a>
+	{% endif %}
+	<a id ="a1" href="{% url 'home' %}"> Home </a> | <a id ="a1" href="{% url 'about' %}"> About </a>
+</header>
+
+{% block content %}
+
+{% endblock content %}
+
+</body>
+</html>
