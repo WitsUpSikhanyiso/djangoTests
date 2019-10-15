@@ -3,9 +3,19 @@ from django.urls import reverse
 from django.contrib.auth import get_user_model
 class SimpleTests(SimpleTestCase):
 	
+	def test_lectureSignup_page_status(self):
+		response = self.client.get('/accounts/signup/lecture/')
+		self.assertEqual(response.status_code,200)
+
+	def test_studentsSignup_page_status(self):
+		response = self.client.get('/accounts/signup/student/')
+		self.assertEqual(response.status_code,200)
+	
+	
 	def test_logedin_page_status_code(self):
 		response = self.client.get('/accounts/login/')
 		self.assertEqual(response.status_code,302)
+
 
 	def test_signup_page_status_code(self):
 		response = self.client.get('/accounts/signup/')
