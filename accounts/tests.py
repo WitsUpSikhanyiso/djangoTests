@@ -2,6 +2,10 @@ from django.test import SimpleTestCase , TestCase
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 class SimpleTests(SimpleTestCase):
+	
+	def test_logedin_page_status_code(self):
+		response = self.client.get('/accounts/login/')
+		self.assertEqual(response.status_code,302)
 
 	def test_signup_page_status_code(self):
 		response = self.client.get('/accounts/signup/')
