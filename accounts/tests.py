@@ -1,7 +1,8 @@
 from django.test import SimpleTestCase , TestCase
 from django.urls import reverse
 from django.contrib.auth import get_user_model
-class SimpleTests(SimpleTestCase):	
+class SimpleTests(SimpleTestCase):
+	
 	def test_lectureSignup_page_status(self):
 		response = self.client.get('/accounts/signup/lecture/')
 		self.assertEqual(response.status_code,200)
