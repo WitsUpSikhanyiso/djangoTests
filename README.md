@@ -4,3 +4,5 @@ Tutor tracker website developed in Django a python framework
 
 [![Build Status](https://travis-ci.org/witsupsikhanyiso/djangoTests.svg?branch=master)](https://travis-ci.org/witsupsikhanyiso/djangoTests)
 [![codecov](https://codecov.io/gh/Witupsikhanyiso/djangoTests/branch/master/graph/badge.svg)](https://codecov.io/gh/WitsUpSikhanyiso/djangoTests)
+
+[![Coverage Status](https://coveralls.io/repos/github/WitsUpSikhanyiso/djangoTests/badge.svg)](https://coveralls.io/github/WitsUpSikhanyiso/djangoTests)
