@@ -10,7 +10,7 @@ class SimpleTests(SimpleTestCase):
 
 	def test_about_page_status_code(self):
 		response = self.client.get('/tutortracker/about/')
-		self.assertEqual(response.status_code,200)
+		self.assertEqual(response.status_code
 
 
 	def test_home_uses_correct_template(self):
